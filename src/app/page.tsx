@@ -97,7 +97,37 @@ const Page: React.FC = () => {
       },
     });
 
-    const specials = [ebichili, katsuo, hre, auhun];
+    const catmeme = Bodies.circle(200, 500, 12, {
+      render: {
+        sprite: {
+          texture: '/catmeme.svg', // 画像のパス
+          xScale: 0.08,
+          yScale: 0.08,
+        },
+      },
+    });
+
+    const obanium = Bodies.circle(200, 500, 12, {
+      render: {
+        sprite: {
+          texture: '/obanium.svg', // 画像のパス
+          xScale: 0.08,
+          yScale: 0.08,
+        },
+      },
+    });
+
+    const yugakusei = Bodies.circle(200, 500, 12, {
+      render: {
+        sprite: {
+          texture: '/yugakusei.svg', // 画像のパス
+          xScale: 0.08,
+          yScale: 0.08,
+        },
+      },
+    });
+
+    const specials = [ebichili, katsuo, hre, auhun, catmeme, obanium, yugakusei];
     //#endregion
 
     //#region boxes
@@ -183,7 +213,7 @@ const Page: React.FC = () => {
     const draggableObjects = [...specials, ...straws];
 
     // Create a ground
-    const ground = Bodies.rectangle(200, 870, 400, 200, {
+    const ground = Bodies.rectangle(200, 894, 400, 200, {
       isStatic: true,
       render: {
         fillStyle: 'transparent',

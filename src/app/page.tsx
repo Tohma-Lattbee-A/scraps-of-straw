@@ -236,7 +236,7 @@ const Page: React.FC = () => {
 
 
     // Add the boxes and the ground to the world
-    World.add(engine.world, [ground, wallL, wallR, boy, girl, ...boxes, ...specials]);
+    World.add(engine.world, [ground, wallL, wallR, boy, girl, ...boxes, ...draggableObjects]);
 
     // Add mouse control
     const mouse = Mouse.create(render.canvas);
